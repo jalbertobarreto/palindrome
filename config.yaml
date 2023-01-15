@@ -40,7 +40,3 @@ resources:
       accessConfigs:
         - name: External NAT
           type: ONE_TO_ONE_NAT
-    metadata:
-      items:
-      - key: startup-script
-        value: "mkdir /home/$USER/palindrome && curl -s 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' > /home/$USER/palindrome/palindrome.sh && chmod +x /home/$USER/palindrome/palindrome.sh"
