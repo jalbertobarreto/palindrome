@@ -45,7 +45,3 @@ resources:
       - key: startup-script
         value: "wget 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' -O 
 /~/palindrome/palindrome.sh && chmod +x /~/palindrome/palindrome.sh"
-
-
-#To deploy using config.yaml run the following:
-#gcloud deployment-manager deployments create my-deployment --config config.yaml
