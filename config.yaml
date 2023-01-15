@@ -43,4 +43,4 @@ resources:
     metadata:
       items:
       - key: startup-script
-        value: "mkdir ~/palindrome && curl -s 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' > ~/palindrome/palindrome.sh && chmod +x ~/palindrome/palindrome.sh"
+        value: "mkdir /home/$USER/palindrome && curl -s 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' > /home/$USER/palindrome/palindrome.sh && chmod +x /home/$USER/palindrome/palindrome.sh"
