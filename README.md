@@ -1,6 +1,10 @@
 # Palindrome detector setup guide
 From GCP Cloud Shell download and run setup.sh running the following command:<br>
-wget -s https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/setup.sh && chmod +x setup.sh && ./setup.sh
+wget -q https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/setup.sh && chmod +x setup.sh && ./setup.sh
+
+When prompted, click authorize
+
+Once shell access is granted run ./palindrome.sh "name-to-test"
 
 # Palindrome detector uninstall guide
 From GCP Cloud Shell run the following command:<br>
