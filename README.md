@@ -1,5 +1,5 @@
 # Palindrome detector setup guide
-From GCP Cloud Shell download and run setup.sh running the following command:
+From GCP Cloud Shell download and run setup.sh running the following command:/n
 wget -s https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/setup.sh && chmod +x setup.sh && ./setup.sh
 
 # Download config.yaml to GCP Cloud Shell
