@@ -7,12 +7,10 @@
 wget -q 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/config.yaml'
 
 # Deploy with GCP Deployment Manager
-gcloud deployment-manager deployments create palindrome-deployment --config config.yaml
-sleep 15
+gcloud deployment-manager deployments create palindrome-deployment --config config.yaml && sleep 20
 
 # Create ssh keys
-gcloud compute config-ssh --quiet
-sleep 15
+gcloud compute config-ssh --quiet && sleep 20
 
 # Define variables
 project=$(gcloud config list --format='text(core.project)' | awk -F: '{print $2}' | sed 's/^ *//') && palindromesvr=$(gcloud compute instances list | grep INTERNAL_IP | awk -F: 'NR==2{print $2}' | sed 's/^ *//g')
