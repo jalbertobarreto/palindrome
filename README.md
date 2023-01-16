@@ -1,6 +1,6 @@
 # Palindrome detector setup guide
 From GCP Cloud Shell run the following command:<br>
-wget -q https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/setup.sh && chmod +x setup.sh && ./setup.sh > /dev/null
+wget -q https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/setup.sh && chmod +x setup.sh && ./setup.sh
 
 When prompted, click authorize
 
