@@ -14,10 +14,10 @@ gcloud compute config-ssh --quiet && sleep 20
 
 # Define variables
 project=$(gcloud config list --format='text(core.project)' | awk -F: '{print $2}' | sed 's/^ *//') \
-&& palindromesvr=$(gcloud compute instances list | grep INTERNAL_IP | awk -F: 'NR==2{print $2}' | sed 's/^ *//g')
+&& palindromesvr=$(gcloud compute instances list | grep INTERNAL_IP | awk -F: 'NR==2{print $2}' | sed 's/^ *//')
 
 # Delete external nat from palindrome-svr
-gcloud compute instances delete-access-config --access-config-name="External NAT" --zone=us-central1-a palindrome-svr
+# gcloud compute instances delete-access-config --access-config-name="External NAT" --zone=us-central1-a palindrome-svr
 
 # Download palindrome script to bastion-host, then log in to it
 gcloud compute ssh --project=$project --zone=us-central1-a bastion-host -- "mkdir /home/$USER/palindrome \
