@@ -21,7 +21,7 @@ project=$(gcloud config list --format='text(core.project)' | awk -F: '{print $2}
 
 # Download palindrome script to bastion-host, then log in to it
 gcloud compute ssh --project=$project --zone=us-central1-a bastion-host -- "mkdir /home/$USER/palindrome \
-&& curl -s 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' > /home/$USER/palindrome/palindrome.sh \]
+&& curl -s 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/palindrome.sh' > /home/$USER/palindrome/palindrome.sh \
 && chmod +x /home/$USER/palindrome/palindrome.sh \
 && cd /home/$USER/palindrome \
 && sed -i '7ipalindromesvr='"$palindromesvr" palindrome.sh ; bash"
