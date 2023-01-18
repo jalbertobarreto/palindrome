@@ -7,7 +7,7 @@
 wget -q 'https://raw.githubusercontent.com/jalbertobarreto/palindrome/main/config.yaml'
 
 # Deploy with GCP Deployment Manager
-gcloud deployment-manager deployments create palindrome-deployment --config config.yaml --quiet && sleep 20
+gcloud deployment-manager deployments create palindrome-deployment --config config.yaml && sleep 20
 
 # Create ssh keys
 gcloud compute config-ssh --quiet && sleep 20
