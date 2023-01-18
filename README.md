@@ -8,7 +8,7 @@ Once shell access is granted run ./palindrome.sh "name-to-test"
 
 # Palindrome detector uninstall guide
 From GCP Cloud Shell run the following command:<br>
-gcloud deployment-manager deployments delete palindrome-deployment
+rm setup.sh config.yaml && gcloud deployment-manager deployments delete palindrome-deployment
 
 
 # Build image for docker
