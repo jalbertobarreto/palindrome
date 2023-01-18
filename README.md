@@ -12,15 +12,21 @@ rm setup.sh config.yaml && gcloud deployment-manager deployments delete palindro
 
 
 # Build image for docker
+from palindrome-svr
+git clone http://wwww.github.com/jalbertobarreto/palindrome
+cd palindrome
 docker build --tag palindrome .
 
 # Run container from image manually
-docker run -p 81:81 -d --name palindrome palindrome
+From palindrome-svr
+docker run -p 81:81 -d -rm --name palindrome palindrome
 
 # Access from
-https://<SERVER-IP>:81/palindrome/<word>
+from bastion-host
+https://SERVER-IP:81/palindrome/word-to-test
   
 # Clean up
+From palindrome-svr
 docker stop palindrome
-docker container rm palindrome\
+docker container rm palindrome
 docker image rm palindrome
